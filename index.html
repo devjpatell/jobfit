@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JobFit · Match your resume to a job posting</title>
+<meta name="description" content="Free, private resume-to-job matcher. See which skills a job asks for that your resume is missing. Runs entirely in your browser.">
+<meta property="og:title" content="JobFit · Match your resume to a job posting">
+<meta property="og:description" content="See which required skills your resume is missing. Free, private, runs in your browser.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><span class="mark" aria-hidden="true"></span>JobFit</div>
+    <p class="tag">Paste your resume and a job posting. See which skills the job asks for that your resume doesn't show, with required skills first.</p>
+    <p class="privacy">Private by design: everything runs in your browser. Nothing is uploaded or saved.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="inputs">
+    <div class="field">
+      <div class="field-head">
+        <label for="resume">Your resume</label>
+        <label class="file">Open .txt file<input type="file" id="resumeFile" accept=".txt,.md,text/plain"></label>
+      </div>
+      <textarea id="resume" placeholder="Paste your resume text here. From a PDF: open it, select all, copy, paste." spellcheck="false"></textarea>
+    </div>
+    <div class="field">
+      <div class="field-head">
+        <label for="job">Job posting</label>
+        <label class="file">Open .txt file<input type="file" id="jobFile" accept=".txt,.md,text/plain"></label>
+      </div>
+      <textarea id="job" placeholder="Paste the full job description, including the requirements and nice-to-have sections." spellcheck="false"></textarea>
+    </div>
+  </section>
+
+  <div class="actions">
+    <button id="run" class="primary">Check match</button>
+    <button id="sample" class="ghost">Try a sample</button>
+    <button id="clear" class="ghost">Clear</button>
+    <span id="status" role="status"></span>
+  </div>
+
+  <section id="results" hidden>
+    <div class="summary">
+      <div class="dial" id="dial" role="img" aria-label="Match score">
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="52" class="track"></circle>
+          <circle cx="60" cy="60" r="52" class="bar" id="dialBar"></circle>
+        </svg>
+        <div class="dial-num"><b id="score">0</b><span>match</span></div>
+      </div>
+      <div class="summary-text">
+        <h2 id="headline"></h2>
+        <p id="breakdown" class="muted"></p>
+        <p id="experience"></p>
+      </div>
+    </div>
+
+    <div class="cols">
+      <div class="card">
+        <h3>Missing from your resume <span class="count" id="missingCount"></span></h3>
+        <p class="muted small">Required skills first. Only add a skill if you have really used it, and show where (a project or a bullet), not just in a list.</p>
+        <div id="missing" class="chips"></div>
+      </div>
+      <div class="card">
+        <h3>Already on your resume <span class="count" id="matchedCount"></span></h3>
+        <div id="matched" class="chips"></div>
+        <div id="extraWrap" hidden>
+          <h4>Your other skills (not in this posting)</h4>
+          <div id="extra" class="chips quiet"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cols">
+      <div class="card">
+        <h3>Resume checks</h3>
+        <ul id="checks" class="checks"></ul>
+      </div>
+      <div class="card" id="kwCard">
+        <h3>Words the posting repeats</h3>
+        <p class="muted small">Not skills, but terms this job uses more than once that your resume never mentions. If they describe your work, use the same words.</p>
+        <div id="keywords" class="chips quiet"></div>
+      </div>
+    </div>
+
+    <p class="muted small note">The score is a keyword match, not a prediction. Real recruiters and applicant tracking systems weigh things differently. Use it to find gaps, not to stuff keywords.</p>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  Open source · <a href="https://github.com/devjpatell/jobfit">github.com/devjpatell/jobfit</a> · Built by <a href="https://devjpatell.github.io/">Dev Patel</a>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
