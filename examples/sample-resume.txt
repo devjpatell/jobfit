@@ -1,0 +1,27 @@
+Jordan Lee
+Backend Software Engineer · Austin, TX
+jordan.lee@example.com · (512) 555-0142 · linkedin.com/in/jordan-lee-example · github.com/jordan-lee-example
+
+SUMMARY
+Backend engineer who builds reliable Python and Go services. Comfortable owning features from design to production.
+
+EXPERIENCE
+Software Engineer, Brightlane Logistics (fictional) · Austin, TX · Aug 2023 – Present
+- Built a shipment-tracking REST API in Python and FastAPI that serves 2,000 requests per second at p95 under 80 ms
+- Cut nightly report time from 40 minutes to 6 by moving batch jobs to PostgreSQL materialized views
+- Containerized 9 services with Docker and wrote GitHub Actions pipelines that deploy to AWS
+- Responsible for on-call rotation and various bug fixes
+
+Software Engineering Intern, Pinecrest Health (fictional) · Remote · May 2022 – Aug 2022
+- Added Redis caching to a patient-lookup endpoint, reducing database load by 35%
+- Worked on unit tests with pytest for the billing module
+
+PROJECTS
+Rate Limiter Library: token-bucket rate limiter in Go with 98% test coverage
+Study Buddy: Flask app that turns lecture notes into flashcards
+
+SKILLS
+Python, Go, SQL, FastAPI, Flask, PostgreSQL, Redis, Docker, AWS, Git, GitHub Actions, Linux, pytest
+
+EDUCATION
+B.S. Computer Science, University of Texas at Austin, 2023

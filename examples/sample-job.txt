@@ -1,0 +1,24 @@
+Backend Engineer II - Northwind Freight (fictional company)
+
+About the role
+You'll design and run the services that move freight data between carriers, warehouses and customers.
+
+What you'll do
+- Build and scale backend services and REST APIs used by thousands of customers
+- Own services end to end, from design through on-call
+- Collaborate with product and data teams on new features
+
+Requirements
+- 2+ years of professional software engineering experience
+- Strong Python or Go
+- Experience with PostgreSQL or another relational database
+- Experience with Docker and Kubernetes
+- Experience building CI/CD pipelines
+- Solid understanding of distributed systems and system design
+- Strong communication skills
+
+Nice to have
+- Kafka or another event streaming platform
+- Terraform
+- Experience with AWS
+- Monitoring with Prometheus and Grafana
